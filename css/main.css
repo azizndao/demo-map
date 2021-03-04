@@ -1,0 +1,104 @@
+@import url(https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css);
+@import url(https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    height: 100vh;
+}
+
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#instruction {
+    display: flex;
+    flex-direction: column;
+    padding:  56px;
+}
+
+#instruction input {
+    height: 40px;
+    border: none;
+    border-radius: 4px ;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: none;
+    font-size: 1.2em;
+    box-shadow: 0 8px 16px lightgrey;
+}
+
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/* .form-control input {
+} */
+
+.form-control .suggestions {
+    z-index: 19999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 4px;
+    list-style: none;
+    font-size: 1.2em;
+    box-shadow: 0 8px 16px lightgrey;
+    clear: both;
+}
+
+.form-control .suggestions .item {
+    height: 56px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 56px;
+    font-size: 1.1em;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.719);
+}
+
+.form-control .suggestions .item:last-child {
+    border: none;
+}
+
+.form-control .suggestions .item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.compute {
+    height: 35px;
+    background: linear-gradient(to right , rgb(218, 26, 192), rgb(253, 17, 127));
+    border: none;
+    border-radius: 4px ;
+    box-shadow:  0 8px 8px rgba(0, 0, 0, 0.1);
+    color: #eeeeee;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
